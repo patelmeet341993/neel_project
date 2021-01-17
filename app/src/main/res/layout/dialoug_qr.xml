@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@color/app_blue"
+        android:id="@+id/rel1">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:srcCompat="@drawable/qricon"
+            android:layout_centerInParent="true"
+
+            android:id="@+id/qrimg"
+            android:layout_margin="40dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+
+            app:srcCompat="@drawable/cancleicon"
+            android:id="@+id/canclebtn"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

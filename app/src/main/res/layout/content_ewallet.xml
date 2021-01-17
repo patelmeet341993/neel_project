@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ewallet"
+    android:background="@drawable/gradient_3"
+    tools:showIn="@layout/activity_ewallet">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:alpha="0.20"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/tvbal"
+        android:gravity="center"
+        android:text="available balance: ( \u20B9 )"
+        android:fontFamily="@font/aldrich"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/bAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:text="Add Money"
+        android:textColor="@color/md_white_off"
+        android:textSize="19dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/etAmount"
+        android:layout_alignStart="@+id/etAmount"
+        android:background="@color/black"
+        android:alpha="0.70"
+
+        />
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bAdd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@android:color/primary_text_dark"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Enter Amount ( \u20B9 )"
+        android:inputType="numberDecimal"
+        android:textColorHint="@android:color/black" />
+
+
+</RelativeLayout>

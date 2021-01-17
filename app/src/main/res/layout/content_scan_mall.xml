@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ScanMall"
+    tools:showIn="@layout/activity_scan_mall">
+    <com.dlazaro66.qrcodereaderview.QRCodeReaderView
+        android:id="@+id/qrdecoderview"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="300dp" />
+    <com.airbnb.lottie.LottieAnimationView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/animation_view"
+        android:layout_width="290dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="290dp"
+        android:layout_marginTop="15dp"
+        app:lottie_fileName="scan.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:id="@+id/tv"
+        android:gravity="center"
+        android:text="Scan your QR"
+        android:layout_below="@+id/qrdecoderview"/>
+</RelativeLayout>

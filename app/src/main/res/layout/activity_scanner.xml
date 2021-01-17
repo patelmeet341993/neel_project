@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_3"
+    tools:context=".Scanner">
+
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/qr"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/textborder"
+        android:alpha="0.50"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="SCAN THE PRODUCT"
+        android:textColor="@color/md_white_off"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+
+
+<com.dlazaro66.qrcodereaderview.QRCodeReaderView
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_centerInParent="true"
+    android:id="@+id/qr"/>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/animation_view"
+        android:layout_width="350dp"
+        android:layout_centerInParent="true"
+        android:layout_height="350dp"
+        app:lottie_fileName="scan.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt"
+        android:layout_below="@+id/qr"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Product Details"
+        android:textSize="30dp"/>
+</RelativeLayout>

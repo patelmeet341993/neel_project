@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:clickable="true">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="10dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/rel1">
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="25"
+                    android:gravity="center"
+                    android:textColor="@color/black_off"
+                    android:textSize="40dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/date"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_off"
+                    android:id="@+id/day"
+                    android:layout_below="@+id/date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invoice"
+                    android:textSize="12dp"
+                    android:layout_marginTop="10dp"
+                   android:layout_centerHorizontal="true"
+                    android:id="@+id/lab"
+                    android:layout_marginRight="25dp"
+                    android:textColor="@color/md_grey_500"
+                    />
+
+
+                <TextView
+                    android:id="@+id/invoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lab"
+                    android:layout_centerHorizontal="true"
+                    android:text="#bshd3"
+                    android:textColor="@color/md_green_600"
+                    android:textSize="20dp" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/qricon"
+                    android:id="@+id/qr"
+                    android:layout_below="@+id/invoice"/>
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    app:srcCompat="@drawable/icon_cart"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/items"
+                    android:id="@+id/carticon"/>
+
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3 items"
+                    android:textSize="12dp"
+                    android:layout_below="@id/invoice"
+                    android:layout_alignParentRight="true"
+
+                    android:id="@+id/items"
+                    android:textColor="@color/black_off"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="03:25 PM"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/time"
+                    android:background="@drawable/rightbut"
+                    android:padding="10dp"
+                    android:textColor="@color/white"/>
+
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/md_grey_400"
+                android:layout_below="@+id/rel1"></View>
+
+            <RelativeLayout
+                android:layout_below="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FEB"
+                    android:textSize="20dp"
+                    android:id="@+id/month"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018"
+                    android:textSize="20dp"
+                    android:layout_toRightOf="@id/month"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/year"
+                    android:layout_centerVertical="true"/>
+
+
+
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:text="200 Rs/-"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:id="@+id/amt"
+                    android:textColor="@color/black_off"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Offer"
+                    android:textSize="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/offlab"
+                    android:layout_marginRight="25dp"
+                    android:textColor="@color/md_grey_500"
+                    />
+
+
+                <TextView
+                    android:id="@+id/offer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/offlab"
+                    android:layout_centerHorizontal="true"
+                    android:text="10% discount"
+                    android:textColor="@color/md_blue_500"
+                    android:textSize="10dp" />
+
+
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

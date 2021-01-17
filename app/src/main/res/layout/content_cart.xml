@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.neel.projecte.cart"
+    tools:showIn="@layout/activity_cart">
+
+    <com.dlazaro66.qrcodereaderview.QRCodeReaderView
+        android:id="@+id/qrdecoderview"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="300dp" />
+    <com.airbnb.lottie.LottieAnimationView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/animation_view"
+        android:layout_width="290dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="290dp"
+        android:layout_marginTop="15dp"
+        app:lottie_fileName="scan.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true" />
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/app_blue"
+        android:layout_below="@+id/qrdecoderview"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Items : 0 "
+        android:textSize="15dp"
+        android:id="@+id/totitems"
+        android:textColor="@color/black_off"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/qrdecoderview"
+        android:background="@drawable/leftbutton"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 \u20B9 /-"
+        android:textSize="35dp"
+        android:id="@+id/totrs"
+        android:paddingRight="20dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/black_off"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/totitems"
+        android:background="@drawable/leftbutton"
+        />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#f8f8f8"
+        android:src="@drawable/icon_redo"
+        android:visibility="gone"
+        android:id="@+id/redo"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="300dp"/>
+    <com.andremion.counterfab.CounterFab
+        android:id="@+id/counter_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@color/colorAccent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+         app:srcCompat="@drawable/icon_cart" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/app_blue"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="Balance 300 \u20B9 /-"
+            android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/ewallet"
+            />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Pay"
+            android:id="@+id/btnpay"
+
+            android:background="@drawable/butnclick"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:visibility="gone"
+        android:background="@drawable/rounded_down_corners_bg"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/slider">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Items"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:id="@+id/tv"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/tv"
+            android:layout_margin="5dp"
+            android:id="@+id/v">
+        </View>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/recy"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
